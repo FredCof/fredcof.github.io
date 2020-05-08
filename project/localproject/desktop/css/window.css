@@ -1,0 +1,96 @@
+.window{
+    z-index: 0;
+    position: absolute;
+    border-radius: 10px;
+}
+.window .bar{
+    border-radius: 10px 10px 0 0;
+    user-select: none;
+    padding: .2em;
+    padding-left: 1em;
+    height: 1.3em;
+    width: 100%;
+    background: rgb(116, 116, 116);
+    box-shadow: 0 -5px 2px 2px rgb(94, 94, 94) inset;
+}
+.window .bar div{
+    float: left;
+    transform: translateY(-.1em);
+    display: inline-block;
+    position: relative;
+    height: .9em;
+    width: .9em;
+    margin: 0 10px 0 0;
+    padding: 0;
+    border-radius: .5em;
+}
+.window .exit{
+    background: #ff6259;
+    box-shadow: 0 0 6px 1px crimson inset;
+}
+.window .exit:hover::after{
+    position: absolute;
+    content: '×';
+    width: .9em;
+    height: .9em;
+    line-height: .9em;
+    font-weight: 900;
+    text-align: center;
+    opacity: .5;
+    animation: opac 0.2s forwards;
+}
+.window .mini{
+    background: #fdb525;
+    box-shadow: 0 0 6px 1px rgb(186, 129, 62) inset;
+}
+.window .mini:hover::after{
+    position: absolute;
+    content: '-';
+    width: .9em;
+    height: .9em;
+    line-height: .9em;
+    font-weight: 900;
+    text-align: center;
+    opacity: .5;
+    animation: opac 0.2s forwards;
+}
+.window .maxi{
+    background: #25c83a;
+    box-shadow: 0 0 6px 1px rgb(86, 162, 64) inset;
+}
+.window .maxi:hover::after{
+    position: absolute;
+    content: '+';
+    width: .9em;
+    height: .9em;
+    line-height: .9em;
+    font-weight: 900;
+    text-align: center;
+    opacity: .5;
+    animation: opac 0.2s forwards;
+}
+@keyframes opac {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: .5;
+    }
+}
+.window .bar .bartitle{
+    width: 60%;
+    float: right;
+}
+.window .bartitle span{
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+
+.frame{
+    width: 100%;
+    height: calc(100% - 1em);
+}

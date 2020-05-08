@@ -1,0 +1,30 @@
+.docker{
+    position: absolute;
+    bottom: 0;
+    width: 30vw;
+    height: 3.3em;
+    background: rgba(154, 154, 154, 0.63);
+    border-radius: 15px 15px 0 0;
+    margin-left: 35vw;
+    padding: .2em .7em 0 .7em;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+          align-items: center;
+    -webkit-justify-content: center;
+          justify-content: center;
+    z-index: 1000;
+}
+.docker .icon:first-child{
+    margin: 0;
+}
+.docker .icon{
+    margin-left: 1em;
+    content: url('../img/icon/cmd.webp');
+    width: 3em;
+    background: transparent;
+    transition: all .5s ease;
+}
+.docker .icon:hover{
+    transform: scale(1.6) translateY(-.5em);
+}

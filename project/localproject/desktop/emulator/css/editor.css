@@ -1,0 +1,56 @@
+#asm_editor{
+    background: black;
+    position: absolute;
+    width: 600px;;
+    height: 25em;
+    overflow: auto;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    counter-reset:lineno;
+    border: 1px grey solid;
+}
+#asm_editor::-webkit-scrollbar{
+     width: 0 !important
+}
+
+.line::before{
+    position: absolute;
+    content:counter(lineno);
+    margin-right: 10px;
+    color: white;
+    font-weight: bolder;
+    transform: translateX(-30px);
+}
+.line:focus{
+    outline: none;
+    background: rgb(50, 48, 48);
+}
+.line{
+    position: relative;
+    color: rgb(202, 235, 222);
+    counter-increment:lineno;
+    width: calc(100% - 54px);
+    margin: 0 2px;
+    height: 1.2em;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    padding: 0 0 0 50px;
+    letter-spacing: 1px;
+    display: block;
+    font-size: 1em;
+}
+
+span.key{
+    color: rgb(108, 153, 240);
+}
+span.func{
+    color: rgb(197, 124, 247);
+}
+span.opera{
+    color: rgb(216, 233, 112);
+}
+span.reg{
+    color:rgb(97, 223, 182);
+}
+span.label{
+    color:rgb(241, 142, 148);
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--auathor: cofalconer-->
+<!--if any tag not pair,will not get responseXML;-->
+<root>
+
+    <item id="ax">
+        <keys>
+            <word>16位</word>
+            <word>ah</word>
+            <word>al</word>
+        </keys>
+        <des>Accumulator Register, 编程中用的最多、最频繁的寄存器。AX、AH、AL在乘、除运算中特殊.</des>
+    </item>
+
+    <item id="bx">
+        <keys>
+            <word>16位</word>
+            <word>bh</word>
+            <word>bl</word>
+        </keys>
+        <des>Base Rigister, 基地址寄存器, 可用来存放偏移地址.</des>
+    </item>
+
+    <item id="cx">
+        <keys>
+            <word>16位</word>
+            <word>ch</word>
+            <word>cl</word>
+        </keys>
+        <des>Count Rigister, 计数寄存器, 在循环操作时做寄存器使用, 控制循环次数.</des>
+    </item>
+
+    <item id="dx">
+        <keys>
+            <word>16位</word>
+            <word>dh</word>
+            <word>dl</word>
+        </keys>
+        <des>Data Rigister, 数据寄存器, 在乘、除法及I/O端口操作有专用.</des>
+    </item>
+    <item id="int">
+        <keys>
+            <word>系统中断</word>
+            <word>键盘</word>
+            <word>屏幕</word>
+            <word>文件</word>
+        </keys>
+        <des>系统中断，调用相关的系统服务时使用.</des>
+    </item>
+
+</root>
+
+<!--
+<root>
+    <item id="">
+        <keys>
+            <word></word>
+        </keys>
+    </item>
+</root>
+-->

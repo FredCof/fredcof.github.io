@@ -1,0 +1,35 @@
+<!--<link rel="stylesheet" href="data/page/page.css">-->
+<h1>AX</h1>
+<p>在乘除法指令中作累加器，在I/O指令中作数据寄存器。是16位寄存器，可以拆分为两个8位寄存器，需要注意代码中的操作数类型不匹配错误。</p>
+<h2>AH</h2>
+<p>在LAHF/SAHF指令中作目的/源寄存器</p>
+<h2>AL</h2>
+<p>在BCD、ASCII码数据运算时作累加器，在XLAT指令中作变址寄存器</p>
+<h3>常用写法</h3>
+<figure>
+    <table>
+        <thead>
+            <tr><th>写法</th><th>作用</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MOV AX,DATA<br>MOV DS,AX</td>
+                <td>将数据段地址放入DS</td>
+            </tr>
+            <tr>
+                <td>AND AX, 0</td>
+                <td>将AX清零</td>
+            </tr>
+            <tr>
+                <td>IN AL(或者IN AX)</td>
+                <td>端口输入</td>
+            </tr>
+            <tr>
+                <td>MOV AX,10H</td>
+                <td>AX输入</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h3>与AX相关的操作</h3>
+<p>LAHF、SAHF、POPF、XLAT、IN、CWB、CBW、DIV、IDIV、INT</p>

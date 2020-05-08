@@ -1,0 +1,354 @@
+*{
+    cursor:default
+}
+body{
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar { width: 0 !important }
+.container{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 170px;
+    background-image: linear-gradient(120deg,rgb(52, 155, 199),rgb(22, 104, 112));
+    color: floralwhite;
+    text-align: center;
+}
+.container a:link,a:visited,a:hover,a:active{
+    color: floralwhite;
+    text-decoration: none;
+}
+.title{
+    overflow: hidden;
+    white-space:nowrap;
+    font-size: 6em;
+    font-weight: bold;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    align-content: center;
+}
+.subline{
+    font-size: 2em;
+}
+.querydiv{
+    position: relative;
+}
+.querydiv input{
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    display: flexbox;
+    width: 100%;
+    border: 1px solid rgb(107, 119, 167);
+    border-radius: 8px;
+    line-height: 2em;
+    padding-left: 2em;
+    box-shadow: 0 0 0 0 #fff;
+    transition: all 1s ease;
+}
+.querydiv input:focus{
+    cursor: text;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    outline-style: none;
+    background: none;
+    outline:none;
+    border: 0px;
+    box-shadow: 0px 0px 5px 2px rgba(34, 133, 236, 0.8);
+    width: 86%;
+}
+.btn{
+    position: absolute;
+    top: 1px;
+    right: 20%;
+    z-index: -1;
+    transition: all 1s ease;
+}
+input:focus~.btn{
+    color: rgb(55, 92, 148);
+    z-index: 10;
+    right: 0;
+    font-weight: bold;
+}
+input::-webkit-input-placeholder{
+    color: rgba(63, 127, 163, 0.59);
+    font-weight: bold;
+}
+input:focus~.condidate{
+    animation: shorten 1s ease forwards;
+    display: block;
+    width: 86%;
+}
+@keyframes shorten {
+    0%{
+        opacity: 0;
+        width: 100%;
+    }
+    100%{
+        opacity: 1;
+        width: 86%;
+    }
+}
+.condidate{
+    display: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    border: 1px solid rgb(93, 131, 154);
+    background: rgba(255, 255, 255, 1);
+    transition: width 1s ease;
+    padding: 6px 1em;
+}
+.condidate .item{
+    padding: 2px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    padding-left: 1em;
+    border-bottom: 1px solid rgb(73, 193, 228);
+    letter-spacing: 3px;
+}
+.condidate .item span{
+    font-weight: bolder;
+    color: rgb(26, 138, 145);
+}
+
+.condidate .decration{
+    padding: 5px 10px;
+    font-size: 1.5em;
+    float: right;
+    font-family: 'Satisfy', cursive;
+}
+
+.main hr{
+    margin: 2px 0 8px;
+}
+.notetips{
+    float: left;
+    width: calc(50% - 5px);
+    box-shadow: 0 0 1px 1px rgba(68, 104, 233,0.1);
+    border-radius: 16px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease;
+}
+.notetips:nth-child(odd){
+    margin-right: 10px;
+}
+.notetips:hover{
+    box-shadow: 0 0 5px 5px rgba(93, 201, 201, 0.2);
+    transform: scale(1.1);
+}
+.notetips:active {
+    animation: twing 0.1s infinite linear;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px 5px rgba(93, 201, 201, 0.2);
+}
+.notetips:active::after{
+    content: "Hentai!!Don't touch me!!";
+    color: rgba(123, 167, 218, 0.21);
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+@keyframes twing {
+    0%{
+        transform: scale(1.1) rotate(0deg);
+    }
+    25%{
+        transform: scale(1.1) rotate(-10deg);
+    }
+    75%{
+        transform: scale(1.1) rotate(10deg);
+    }
+    100%{
+        transform: scale(1.1) rotate(0deg);
+    }
+}
+div.theme::before{
+    content: '';
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background: rgb(58, 103, 201);
+    float: right;
+    z-index: 10;
+}
+@keyframes circle {
+    0%{
+        transform: translateX(16px) rotate(0deg);
+        box-shadow: 0 4px 2px 2px rgba(74, 235, 66, 0.57);rgba(74, 235, 66, 0.57)
+    }
+    50%{
+        transform: translateX(24px) rotate(180deg);
+        box-shadow: 0 4px 2px 2px rgb(220, 235, 66);
+    }
+    100%{
+        transform: translateX(16px) rotate(0deg);
+    }
+}
+div.theme::after{
+    content: '';
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background: rgb(135, 159, 232);
+    float: right;
+    z-index: 10;
+    transform: translateX(16px);
+    animation: circle 2s infinite;
+}
+.descrip{
+    border-left: 10px solid #fff;
+    border-image: -webkit-linear-gradient(180deg,rgb(129, 200, 231),rgb(35, 122, 171)) 10 50;
+    border-image: -moz-linear-gradient(180deg,rgb(129, 200, 231),rgb(35, 122, 171)) 10 50;
+    border-image: linear-gradient(180deg,rgb(129, 200, 231),rgb(35, 122, 171)) 10 50;
+    padding-left: 20px;
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+}
+.nonechose{
+    -webkit-box-orient: vertical;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.bubble-loading{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(45deg,rgb(25, 25, 93),rgb(90, 90, 173));
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 3px 2px 1px rgba(0,0,0,0.2);
+}
+.bubble-loading::before,
+.bubble-loading::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    background: rgb(51,149,230);
+    border-radius: 100%;
+    z-index: -1;
+    transform: translateY(-4px);
+}
+.bubble-loading::before{
+    animation: rotate2 infinite 3s linear;
+}
+.bubble-loading::after{
+    animation: rotate2 infinite 2s linear;
+}
+@keyframes rotate2 {
+    0%{
+        transform: rotate(0deg) translateY(-2px);
+    }
+    100%{
+        transform: rotate(360deg) translateY(-2px);
+    }
+}
+.loading-div,
+.bottom-search,
+.roundbox{
+    float: right;
+}
+.bottom-search{
+    margin: 20px 0 40px;
+    width: 100%;
+}
+.bottom-tips{
+    display: none;
+    float: right;
+    margin-right: 10px;
+    border: 2px solid grey;
+    border-image: -webkit-linear-gradient(180deg,rgb(129, 200, 231),rgb(35, 122, 171)) 10 50;
+    border-image: -moz-linear-gradient(180deg,rgb(129, 200, 231),rgb(35, 122, 171)) 10 50;
+    border-image: linear-gradient(180deg,rgb(129, 200, 231),rgb(35, 122, 171)) 10 50;
+    height: 40px;
+    border-radius: 20px;
+    padding: 8px;
+    color: rgb(69, 155, 186);
+    font-weight: bold;
+    opacity: 0;
+}
+.bottom-tips::before{
+    content: '';
+    position: relative;
+    float: right;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 8px solid rgb(54, 149, 203);
+    border-bottom: 8px solid transparent;
+    transform: translateX(17px) translateY(10%);
+}
+.bottom-tips::after{
+    content: '';
+    position: relative;
+    float: right;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 8px solid white;
+    border-bottom: 8px solid transparent;
+    transform: translateX(22px) translateY(10%);
+}
+.bottom-search:hover .bottom-tips{
+    display: inline-block;
+    opacity: 1;
+    animation: expand 0.5s ease-out;
+}
+@keyframes expand {
+    0%{
+        transform: translateX(50%) scaleX(0);
+    }
+    100%{
+        transform: translateX(0) scaleX(1);
+    }
+}
+.info{
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: floralwhite;
+}
+.info a:link,a:visited,a:hover,a:active{
+    color: floralwhite;
+    text-decoration: none;
+}
+
+footer{
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(120deg,rgb(52, 155, 199),rgb(22, 104, 112));
+    position: relative;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+    font-weight: bold;
+    line-height: 20px;
+    overflow: hidden;
+    transform: translateZ(0);
+}

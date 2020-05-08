@@ -1,0 +1,329 @@
+.vid-wrap {
+    width: 100%;
+    background: #000;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.vid-wrap video {
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+/*This style for padding video.*/
+
+@media screen and (max-width: 1200px) {
+    .none {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .none {
+        display: none;
+    }
+}
+
+.fixed-left-bottom {
+    padding: 0px;
+    margin: 0px;
+    position: fixed;
+    left: 0px;
+    bottom: -10px;
+}
+
+.reward_badge {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.side-related.fixed {
+    position: fixed;
+    top: -21px;
+}
+
+.side-related.fold .related-toggle::before {
+    content: "+";
+}
+
+.side-related.fold .related-body {
+    display: none;
+}
+
+.side-related .related-toggle::before {
+    content: "−";
+    position: relative;
+    margin-right: 5px;
+    bottom: 1px;
+}
+
+.side-related .related-body {
+    position: relative;
+    list-style: none;
+    height: auto;
+    overflow: hidden;
+    padding-left: 0px;
+    padding-right: 5px;
+    text-indent: 0;
+}
+
+.side-related .related-body li {
+    position: relative;
+    list-style: none;
+}
+
+.side-related .related-body li a {
+    padding-left: 10px;
+    max-width: 270px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.side-related .related-body .h1_nav,
+.side-related .related-body .h2_nav,
+.side-related .related-body .h3_nav {
+    margin-left: 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.side-related .related-body .h4_nav,
+.side-related .related-body .h5_nav,
+.side-related .related-body .h6_nav {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.side-related .related-body .h4_nav a,
+.side-related .related-body .h5_nav a,
+.side-related .related-body .h6_nav a {
+    max-width: 260px;
+}
+
+.side-related .related-body .active {
+    border-radius: 4px;
+    background-color: #F5F5F5;
+}
+
+.side-related .related-body .active a {
+    color: #0085a1 !important;
+}
+
+@media (max-width: 1200px) {
+    .side-related {
+        display: none;
+    }
+}
+
+.related-list {
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+}
+
+.related-list .related-listitem {
+    padding: 1px;
+    margin: 0px;
+    margin-left: 0px;
+    list-style-type: disc;
+}
+
+.related-list .related-listitem :hover {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 15px;
+    list-style-type: circle;
+    transition: margin-left 1s ease 0s;
+}
+
+.dropdown {
+    /*position: relative;*/
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    text-align: center;
+    margin: 2px 140px;
+    z-index: 999;
+    border-radius: 40px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.qrcode-descrip {
+    align-content: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.qrcode {
+    margin: 1px 2.5px 1px 2.5px;
+    width: 190px;
+    height: 190px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    /*position: absolute;*/
+    z-index: 1000;
+}
+
+.qrcode:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0, 155, 255, 0.1);
+}
+
+.qrcode:hover+.qrcode-mask,
+.qrcode-mask:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0, 155, 255, 0.1);
+}
+
+.qrcode-mask {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 190px;
+    height: 190px;
+    display: none;
+    padding: auto 0px;
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1001;
+}
+
+.qrcode:hover+.qrcode-mask,
+.qrcode-mask:hover {
+    display: block;
+    opacity: 0.9;
+    background-color: rgb(255, 255, 255);
+    transition: opacity 2s ease 0s;
+}
+
+.qrcode-mask:hover+.qrcode {
+    box-shadow: 0px 8px 16px 0px rgba(0, 155, 255, 0.1);
+}
+
+.qrcode-mask .qrcode-mask-descrip {
+    padding: 0px;
+    margin: 0px auto;
+    height: 190px;
+    line-height: 190px;
+    width: 100px;
+    overflow: hidden;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.relative-div {
+    display: block;
+    position: relative;
+}
+
+/*qrcode for media with other pixel*/
+@media (max-width: 770px) {
+    .qrcode-mask {
+        display: none;
+    }
+
+    .dropdown {
+        /*position: relative;*/
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0px auto;
+        padding: 0px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        text-align: center;
+        margin: 2px auto;
+        z-index: 999;
+        border-radius: 40px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+@media (max-width: 460px) {
+    .inline-block {
+        display: block;
+        margin: 1px auto;
+    }
+
+    .relative-div {
+        display: block;
+        position: relative;
+        padding: 0px auto;
+    }
+
+    .qrcode {
+        margin: 1px auto;
+        width: 190px;
+        height: 190px;
+        border-radius: 16px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+        /*position: absolute;*/
+        z-index: 1000;
+        glyph-orientation-horizontal: center;
+    }
+}
+
+#pic-display {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(102, 102, 102, 0.301);
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+}
+
+#pic-display img {
+    z-index: 1000;
+    width: 80%;
+}

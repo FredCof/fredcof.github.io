@@ -1,0 +1,294 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Github/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Base.Align.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Base.Align.html",
+          "hash": "N8GPCM7V7sBbu+QxLSV3Kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Base.BaseElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Base.BaseElement.html",
+          "hash": "72iBzxy64NakusQvZFAuEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Base.BaseStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Base.BaseStyle.html",
+          "hash": "BCPlCKSlBlE8wSZ+u3UV+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Base.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Base.StringExtensions.html",
+          "hash": "Gl1iv7+r117kMqafxTJ4bg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Base.TableCellBorderStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Base.TableCellBorderStyle.html",
+          "hash": "dOPFzO6m5aKUKiyTU74Yqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Base.html",
+          "hash": "Tm7cirzlmfuVfSChv1X3Zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Components.Paragraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Components.Paragraph.html",
+          "hash": "H/ghgX8jpdu80a6nZGGLbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Components.html",
+          "hash": "kCttlmDlc0ERNNCkpETRVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Docx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Docx.html",
+          "hash": "NgZefWAs3xJK+b0vM7zlKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Utils.BaseDocxException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Utils.BaseDocxException.html",
+          "hash": "ArzMrZzDZaD3ADL/xqBq7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Utils.SUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Utils.SUnit.html",
+          "hash": "Q+Y831RS7uj6VHmk7GE64Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Utils.Unit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Utils.Unit.html",
+          "hash": "41Kr76dyYkzwLfkV2Sqokw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.Utils.html",
+          "hash": "9+RoKmBM5i2ox+4kNMcIRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Codex.Word.Net.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Codex.Word.Net.html",
+          "hash": "VNvixQAY9424edGMNcd7sA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "dlRqOO3g+vDjCywiUpUXxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "FNSHx6GzXORRNN2sEUHnAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "qhZp5wkH4gwy9KhbQGW/Pg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Rxq8Q+ntratKa/d5q4pwEw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "+rHUkRZHZRi5gd1aTU6lJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 14,
+          "skipped_file_count": 9
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

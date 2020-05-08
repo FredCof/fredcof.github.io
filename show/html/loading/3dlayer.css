@@ -1,0 +1,31 @@
+.tdlayer{
+    margin-top: 120px;
+    margin-left: 170px;
+    position: relative;
+    width: 250px;
+    height: 415px;
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(-30deg) skew(25deg);
+    transition: 0.5s;
+}
+.tdlayer img{
+    position: absolute;
+    width: 100%;
+    transition: 0.5s;
+}
+.tdlayer:hover img:nth-child(4){
+    transform: translate(120px, -120px);
+    opacity: 1;
+}
+.tdlayer:hover img:nth-child(3){
+    transform: translate(90px, -90px);
+    opacity: 0.8;
+}
+.tdlayer:hover img:nth-child(2){
+    transform: translate(60px, -60px);
+    opacity: 0.5;
+}
+.tdlayer:hover img:nth-child(1){
+    transform: translate(30px, -30px);
+    opacity: 0.2;
+}

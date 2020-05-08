@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+
+    background: rgba(255, 3, 100, .007);
+}
+
+header {
+    display: block;
+    overflow-y: hidden;
+
+    position: relative;
+
+    -webkit-border-radius: 100% 100% 100% 100%/0 0 0 0;
+       -moz-border-radius: 100% 100% 100% 100%/0 0 0 0;
+            border-radius: 100% 100% 100% 100%/0 0 0 0;
+    height: 100vh;
+
+        -ms-border-radius: 100% 100% 100% 100%/0 0 0 0;
+         -o-border-radius: 100% 100% 100% 100%/0 0 0 0;
+}
+
+header img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+}
+
+aside {
+    display: inline-block;
+
+    position: relative;
+
+    margin-right: 3rem;
+    width: 15rem;
+    height: 100vh;
+
+    box-shadow: 10px 0 8px 1px rgba(174, 243, 255, .1);
+}
+
+aside h2 {
+    font-size: 2rem;
+
+    color: transparent;
+    background: #9cecfb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #41d8dd, #5583ee);  /* Chrome 10-25, Safari 5.1-6 */
+    background:         linear-gradient(to right, #41d8dd, #5583ee); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+aside ul {
+    list-style: none;
+
+    position: relative;
+
+    padding: 1.5rem;
+}
+
+aside ul li {
+    font-size: 1.2rem;
+
+    color: transparent;
+    background: #9cecfb;  /* fallback for old browsers */
+    background: 100% / 100% 200% repeat-x -webkit-linear-gradient(to left, rgb(0, 255, 242), #abc7ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: 100% / 100% 200% repeat-x        linear-gradient(to left, rgb(0, 255, 242), #abc7ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+
+    cursor: pointer;
+
+    -webkit-text-fill-color: transparent;
+}
+
+aside ul li:hover {
+    -webkit-border-radius: 0 10px 10px 0;
+       -moz-border-radius: 0 10px 10px 0;
+            border-radius: 0 10px 10px 0;
+
+    background: 0 / 50% 200% repeat-x -webkit-linear-gradient(to left, rgb(0, 255, 242), #abc7ff);
+    background: 0 / 50% 200% repeat-x        linear-gradient(to left, rgb(0, 255, 242), #abc7ff);
+    -webkit-background-clip: text;
+
+    -webkit-transition: all 2s ease;
+       -moz-transition: all 2s ease;
+        -ms-transition: all 2s ease;
+         -o-transition: all 2s ease;
+            transition: all 2s ease;
+
+        -ms-border-radius: 0 10px 10px 0;
+         -o-border-radius: 0 10px 10px 0;
+}
+
+aside ul li::before {
+    position: absolute;
+
+    width: 1.2rem;
+    height: 1.2rem;
+
+    background-color: rgb(142, 253, 238);
+
+    -webkit-transform: translate(-1.3rem, .2rem);
+       -moz-transform: translate(-1.3rem, .2rem);
+        -ms-transform: translate(-1.3rem, .2rem);
+         -o-transform: translate(-1.3rem, .2rem);
+            transform: translate(-1.3rem, .2rem);
+
+    content: '';
+
+    clip-path: polygon(0 20%, 5% 15%, 10% 10%, 20% 0%, 30% 0%, 40% 10%, 50% 20%, 100% 20%, 50% 100%);
+}
+
+section {
+    display: inline-block;
+
+    position: relative;
+
+    width: calc(100vw - 20rem);
+    height: 100vh;
+}
+
+section iframe {
+    border: navajowhite;
+    width: 100%;
+    height: 100%;
+}
+
+section iframe::-webkit-scrollbar {
+    width: 0;
+}

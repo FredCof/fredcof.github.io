@@ -1,0 +1,122 @@
+body{
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+header{
+    width: 100%;
+}
+.title{
+    color:floralwhite;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    background-image:  linear-gradient(120deg,rgb(52, 155, 199),rgb(22, 104, 112));
+    padding: 10px 0px 10px 50px;
+    border-radius: 0 0 20px 20px;
+}
+.frame-contain{
+    width: 100%;
+    font-size: 1em;
+}
+.nonechose{
+    -webkit-box-orient: vertical;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+/*load apge css*/
+*{
+    font-weight: 500;
+}
+
+#page{
+    padding-bottom: 100px;
+}
+
+.pagetitle{
+    font-size: 4em;
+    font-weight: bolder;
+    color: rgb(53, 110, 152);
+    width: 100%;
+    border-bottom: 1px solid rgba(125, 176, 209, 0.8);
+    border-radius: 0 0 100px 0;
+}
+
+.pagetitle+p{
+    text-indent:2em;
+}
+
+h2{
+    margin-top: 30px;
+    border-left: 8px solid rgba(165, 208, 218, 0.55);
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(125, 176, 209, 0.8);
+    border-bottom-left-radius: 20px;
+    border-radius: 0 0 100px 40px;
+}
+
+h3{
+    margin-top: 40px;
+}
+
+table{
+    overflow: hidden;
+    border-collapse:collapse;
+    width: 100%;
+    border-radius: 10px;
+    border-collapse: separate;
+    border: 1px solid rgba(191, 191, 191, 0.53);
+}
+
+thead{
+    background-color: rgba(141, 200, 226, 0.32);
+}
+
+th,td{
+    padding: 5px 10px;
+}
+
+tr:nth-child(even){
+    background-color: rgba(184, 215, 228, 0.2);
+}
+
+thead *{
+    font-weight: bolder;
+}
+/*load apge css*/
+
+
+.info{
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: floralwhite;
+}
+.info a:link,a:visited,a:hover,a:active{
+    color: floralwhite;
+    text-decoration: none;
+}
+
+footer{
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(120deg,rgb(52, 155, 199),rgb(22, 104, 112));
+    position: relative;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    z-index: 1;
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+    font-weight: bold;
+    line-height: 20px;
+    overflow: hidden;
+    transform: translateZ(0);
+    display: none;
+}
