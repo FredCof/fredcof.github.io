@@ -25,6 +25,9 @@
                     <li>
                         <a href="{{ site.baseurl }}/project">Project</a>
                     </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/note">Note</a>
+                    </li>
                     {% for page in site.pages %}{% if page.title %}
                     <li>
                         <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
