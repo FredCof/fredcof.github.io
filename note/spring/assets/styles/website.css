@@ -1,3 +1,11 @@
 .page-inner img {
   text-align: center;
 }
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #1bbef0;
+}

@@ -1,0 +1,624 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第6节：服务与事务 · Spring笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Cofalconer">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../website-1594797512988.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter3/" />
+    
+    
+    <link rel="prev" href="error.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://cofal.work/" target="_blank" class="custom-link">首页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    第一章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/Spring.html">
+            
+                <a href="../chapter1/Spring.html">
+            
+                    
+                    第1节：Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/SpringBoot.html">
+            
+                <a href="../chapter1/SpringBoot.html">
+            
+                    
+                    第2节：Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/HelloWorld.html">
+            
+                <a href="../chapter1/HelloWorld.html">
+            
+                    
+                    第3节：Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/SpringAOP.html">
+            
+                <a href="../chapter1/SpringAOP.html">
+            
+                    
+                    第4节：Spring AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="MVC.html">
+            
+                <a href="MVC.html">
+            
+                    
+                    第1节：MVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    第2节：验证框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="WebMvcConfigurer.html">
+            
+                <a href="WebMvcConfigurer.html">
+            
+                    
+                    第3节：WebMvcConfigurer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="view.html">
+            
+                <a href="view.html">
+            
+                    
+                    第4节：视图技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="error.html">
+            
+                <a href="error.html">
+            
+                    
+                    第5节：错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6" data-path="transactional.html">
+            
+                <a href="transactional.html">
+            
+                    
+                    第6节：服务与事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    第三章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/mybatis.html">
+            
+                <a href="../chapter3/mybatis.html">
+            
+                    
+                    第1节：MyBatis使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/mybatis_annotation.html">
+            
+                <a href="../chapter3/mybatis_annotation.html">
+            
+                    
+                    第2节：MyBatis注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    第四章
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../appendix/">
+            
+                <a href="../appendix/">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../appendix/annotations.html">
+            
+                <a href="../appendix/annotations.html">
+            
+                    
+                    注解符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../appendix/packageversion.html">
+            
+                <a href="../appendix/packageversion.html">
+            
+                    
+                    包版本查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../appendix/curl.html">
+            
+                <a href="../appendix/curl.html">
+            
+                    
+                    CURL使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第6节：服务与事务</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#service--transactional"><b></b>@Service &amp; @Transactional</a></li><ul><li><span class="title-icon "></span><a href="#&#x58F0;&#x660E;service"><b></b>&#x58F0;&#x660E;@Service</a></li><li><span class="title-icon "></span><a href="#transaction"><b></b>@Transaction</a></li></ul></ul></div><a href="#service--transactional" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="service--transactional"><a name="service--transactional" class="anchor-navigation-ex-anchor" href="#service--transactional"><i class="fa fa-link" aria-hidden="true"></i></a>@Service &amp; @Transactional</h1>
+<blockquote>
+<p>Controller&#x7684;&#x8C03;&#x7528;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&#x4EA4;&#x7ED9;&#x4E86;&#x88AB;@Service&#x6CE8;&#x89E3;&#x7684;&#x7C7B;&#xFF0C;&#x662F;&#x4E2A;&#x666E;&#x901A;&#x7684;JavaBean&#xFF0C;Controller&#x4E2D;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x6CE8;&#x5165;&#x8FD9;&#x79CD;Bean&#xFF0C;&#x5E76;&#x4E14;&#x8C03;&#x7528;&#x5176;&#x65B9;&#x6CD5;&#x5B8C;&#x6210;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x901A;&#x5E38;&#x642D;&#x914D;@Transactional&#x3002;</p>
+</blockquote>
+<h2 id="&#x58F0;&#x660E;service"><a name="&#x58F0;&#x660E;service" class="anchor-navigation-ex-anchor" href="#&#x58F0;&#x660E;service"><i class="fa fa-link" aria-hidden="true"></i></a>&#x58F0;&#x660E;@Service</h2>
+<p>&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF0C;domain&#x4E2D;&#x653E;&#x6A21;&#x578B;&#xFF0C;service&#x4E2D;&#x653E;Service&#x63A5;&#x53E3;&#xFF0C;service.impl&#x4E2D;&#x653E;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;</p>
+<pre class="language-"><code class="lang-html">&#x251C;&#x2500;java
+&#x2502;  &#x2514;&#x2500;com.example.project
+&#x2502;    &#x251C;&#x2500;controller
+&#x2502;    &#x2502;  &#x2514;&#x2500;rest
+&#x2502;    &#x251C;&#x2500;domain
+&#x2502;    &#x251C;&#x2500;mapper
+&#x2502;    &#x2514;&#x2500;service
+&#x2502;      &#x2514;&#x2500;impl
+&#x2514;&#x2500;resources
+    &#x251C;&#x2500;mapperXml
+    &#x251C;&#x2500;static
+    &#x2514;&#x2500;templates
+        &#x2514;&#x2500;user
+</code></pre>
+<p>&#x5148;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;UserService&#x7684;&#x63A5;&#x53E3;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>project<span class="token punctuation">.</span>service</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserService</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getUserById</span><span class="token punctuation">(</span><span class="token class-name">Long</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">updateUser</span><span class="token punctuation">(</span><span class="token class-name">Long</span> id<span class="token punctuation">,</span> <span class="token class-name">Integer</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x5B9E;&#x73B0;&#x6B64;&#x4E1A;&#x52A1;&#x63A5;&#x53E3;&#xFF0C;&#x4F7F;&#x7528;@Service&#x6CE8;&#x518C;&#x670D;&#x52A1;&#xFF0C;&#x540C;&#x65F6;&#x642D;&#x914D;@Transactional&#x8FDB;&#x884C;&#x4E8B;&#x52A1;&#x589E;&#x5F3A;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>project<span class="token punctuation">.</span>service<span class="token punctuation">.</span>impl</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>project<span class="token punctuation">.</span>service</span><span class="token punctuation">.</span><span class="token class-name">UserService</span><span class="token punctuation">;</span>
+<span class="token annotation punctuation">@Service</span>
+<span class="token annotation punctuation">@Transactional</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserServiceImpl</span> <span class="token keyword">implements</span> <span class="token class-name">UserService</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getUserById</span><span class="token punctuation">(</span><span class="token class-name">Long</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> user<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">updateUser</span><span class="token punctuation">(</span><span class="token class-name">Long</span> id<span class="token punctuation">,</span> <span class="token class-name">Integer</span> type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>Spring Boot&#x6CA1;&#x6709;&#x8981;&#x6C42;Service&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#x67D0;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x822C;&#x8FD8;&#x662F;&#x4E3A;Service&#x5B9A;&#x4E49;&#x63A5;&#x53E3;&#xFF0C;&#x8FD9;&#x6837;&#x5141;&#x8BB8;&#x4E3A;&#x8FD9;&#x4E2A;Service&#x63D0;&#x4F9B;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x6BD4;&#x5982;&#x6A21;&#x62DF;&#x4E1A;&#x52A1;&#x5B9E;&#x73B0;&#xFF0C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x4E2D;&#x901A;&#x8FC7;Mock&#x6765;&#x6A21;&#x62DF;&#x4E00;&#x4E2A;Service&#x5B9E;&#x73B0;&#x3002;</p>
+</blockquote>
+<h2 id="transaction"><a name="transaction" class="anchor-navigation-ex-anchor" href="#transaction"><i class="fa fa-link" aria-hidden="true"></i></a>@Transaction</h2>
+<pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-jdbc<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p><code>@Transactional</code>&#x53EF;&#x4EE5;&#x4F5C;&#x7528;&#x5728;&#x7C7B;&#x4E0A;&#xFF0C;&#x8FD9;&#x6837;&#x6240;&#x6709;&#x7684;&#x63A5;&#x53E3;&#x65B9;&#x6CD5;&#x90FD;&#x4F1A;&#x53C2;&#x4E0E;&#x4E8B;&#x52A1;&#x7BA1;&#x7406;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x653E;&#x5230;&#x65B9;&#x6CD5;&#x4E0A;&#xFF0C;&#x5219;&#x53EA;&#x6709;&#x65B9;&#x6CD5;&#x53C2;&#x4E0E;&#x3002;</p>
+<p>&#x5F53;Controller &#x8C03;&#x7528;Service &#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x968F;&#x540E;&#x7684;&#x8C03;&#x7528;&#x90FD;&#x5C06;&#x5904;&#x4E8E;&#x8FD9;&#x4E2A;&#x4E8B;&#x52A1;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x3002;&#x5982;&#x679C;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;Service &#x65B9;&#x6CD5;&#x629B;&#x51FA;RuntimeException&#xFF0C; &#x4E8B;&#x52A1;&#x4F1A;&#x81EA;&#x52A8;&#x56DE;&#x6EDA;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x4E8B;&#x52A1;&#x5C06;&#x63D0;&#x4EA4;&#x3002;</p>
+<ul>
+<li>&#x4E8B;&#x52A1;&#x4E0A;&#x4E0B;&#x6587;&#xFF1A; &#x5BF9;&#x4E8E;Service &#x8C03;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x5904;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x90A3;&#x4E48;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x7684;&#x64CD;&#x4F5C;&#x4F1A;&#x5728;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#x3002;&#x4E8B;&#x52A1;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x5F00;&#x542F;&#x662F;&#x4ECE;Controller&#x4E2D;&#x8C03;&#x7528;Service &#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x5F00;&#x542F;&#x7684;&#xFF0C;&#x5E76;&#x5728;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x540E;&#x81EA;&#x52A8;&#x7ED3;&#x675F;&#x4ECE;&#x800C;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;&#xFF0C;&#x6216;&#x8005;&#x6839;&#x636E;&#x629B;&#x51FA;&#x7684;RuntimeException &#x6765;&#x81EA;&#x52A8;&#x56DE;&#x6EDA;&#xFF0C;&#x8C03;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#x8C03;&#x7528;&#x7684;&#x5176;&#x4ED6;Service &#x65B9;&#x6CD5;&#x90FD;&#x4F1A;&#x5904;&#x4E8E;&#x8FD9;&#x4E2A;&#x4E8B;&#x52A1;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x5728;&#x4E8B;&#x52A1;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x518D;&#x6B21;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4E8B;&#x52A1;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x901A;&#x8FC7;&#x6CE8;&#x89E3;&#xFF20;Transactional(propagation = Propagation.REQUIRES_NEW) &#x5B8C;&#x6210;&#xFF0C;&#x6BD4;&#x5982;&#x5728;AuditService &#x4E2D;&#xFF0C;&#x5BA1;&#x8BA1;&#x670D;&#x52A1;&#x65E0;&#x8BBA;&#x4E1A;&#x52A1;&#x8C03;&#x7528;&#x662F;&#x5426;&#x6210;&#x529F;&#xFF0C;&#x90FD;&#x5FC5;&#x987B;&#x628A;&#x5BA1;&#x8BA1;&#x4FE1;&#x606F;&#x5B58;&#x50A8;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;AuditService &#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x4E3A;&#x5F00;&#x542F;&#x65B0;&#x7684;&#x4E8B;&#x52A1;&#x4E0A;&#x4E0B;&#x6587;&#x3002; </li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Cofalconer 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
+2020-07-11 21:13:19
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="error.html" class="navigation navigation-prev " aria-label="Previous page: 第5节：错误处理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter3/" class="navigation navigation-next " aria-label="Next page: 第三章">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第6节：服务与事务","level":"1.3.6","depth":2,"next":{"title":"第三章","level":"1.4","depth":1,"path":"chapter3/README.md","ref":"chapter3/README.md","articles":[{"title":"第1节：MyBatis使用","level":"1.4.1","depth":2,"path":"chapter3/mybatis.md","ref":"chapter3/mybatis.md","articles":[]},{"title":"第2节：MyBatis注解","level":"1.4.2","depth":2,"path":"chapter3/mybatis_annotation.md","ref":"chapter3/mybatis_annotation.md","articles":[]}]},"previous":{"title":"第5节：错误处理","level":"1.3.5","depth":2,"path":"chapter2/error.md","ref":"chapter2/error.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","sharing-plus","prism","-highlight","styles-less","toggle-chapters","multipart","ancre-navigation","livereload"],"root":".","styles":{"website":"website-1594797512988.css","ebook":"ebook-1594797512999.css","pdf":"pdf-1594797513000.css","mobi":"mobi-1594797513001.css","epub":"epub-1594797513002.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Cofalconer 2020","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/FredCof"},"styles-less":{},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"weibo":true,"qq":true,"all":["douban","google","qzone","linkedin"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Cofalconer","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spring笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"首页":"https://cofal.work/"}},"gitbook":"3.2.3","description":"Spring学习笔记！"},"file":{"path":"chapter2/transactional.md","mtime":"2020-07-11T13:13:19.651Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-15T07:18:30.479Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

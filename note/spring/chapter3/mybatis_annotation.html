@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>附录 · Spring笔记</title>
+        <title>第2节：MyBatis注解 · Spring笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="annotations.html" />
+    <link rel="next" href="../chapter4/" />
     
     
-    <link rel="prev" href="../chapter4/" />
+    <link rel="prev" href="mybatis.html" />
     
 
     </head>
@@ -303,9 +303,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../chapter3/">
+                <a href="./">
             
                     
                     第三章
@@ -317,9 +317,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../chapter3/mybatis.html">
+        <li class="chapter " data-level="1.4.1" data-path="mybatis.html">
             
-                <a href="../chapter3/mybatis.html">
+                <a href="mybatis.html">
             
                     
                     第1节：MyBatis使用
@@ -330,9 +330,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../chapter3/mybatis_annotation.html">
+        <li class="chapter active" data-level="1.4.2" data-path="mybatis_annotation.html">
             
-                <a href="../chapter3/mybatis_annotation.html">
+                <a href="mybatis_annotation.html">
             
                     
                     第2节：MyBatis注解
@@ -361,9 +361,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../appendix/">
             
-                <a href="./">
+                <a href="../appendix/">
             
                     
                     附录
@@ -375,9 +375,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="annotations.html">
+        <li class="chapter " data-level="1.6.1" data-path="../appendix/annotations.html">
             
-                <a href="annotations.html">
+                <a href="../appendix/annotations.html">
             
                     
                     注解符
@@ -388,9 +388,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="packageversion.html">
+        <li class="chapter " data-level="1.6.2" data-path="../appendix/packageversion.html">
             
-                <a href="packageversion.html">
+                <a href="../appendix/packageversion.html">
             
                     
                     包版本查找
@@ -401,9 +401,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="curl.html">
+        <li class="chapter " data-level="1.6.3" data-path="../appendix/curl.html">
             
-                <a href="curl.html">
+                <a href="../appendix/curl.html">
             
                     
                     CURL使用
@@ -449,7 +449,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >附录</a>
+        <a href=".." >第2节：MyBatis注解</a>
     </h1>
 </div>
 
@@ -464,8 +464,33 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <footer class="page-footer"><span class="copyright">Copyright &#xA9; Cofalconer 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2020-07-10 13:49:00
+                                <pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper2</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Select</span><span class="token punctuation">(</span><span class="token string">&quot;select * from user&quot;</span><span class="token punctuation">)</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">getAllUsers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Results</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Result</span><span class="token punctuation">(</span>property <span class="token operator">=</span> <span class="token string">&quot;id&quot;</span><span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token annotation punctuation">@Result</span><span class="token punctuation">(</span>property <span class="token operator">=</span> <span class="token string">&quot;username&quot;</span><span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token string">&quot;u&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token annotation punctuation">@Result</span><span class="token punctuation">(</span>property <span class="token operator">=</span> <span class="token string">&quot;address&quot;</span><span class="token punctuation">,</span> column <span class="token operator">=</span> <span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@Select</span><span class="token punctuation">(</span><span class="token string">&quot;select username as u,address as a,id as id from user where id=#{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token class-name">User</span> <span class="token function">getUserById</span><span class="token punctuation">(</span><span class="token class-name">Long</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Select</span><span class="token punctuation">(</span><span class="token string">&quot;select * from user where username like concat(&apos;%&apos;,#{name},&apos;%&apos;)&quot;</span><span class="token punctuation">)</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">getUsersByName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Insert</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;insert into user(username,address) values(#{username},#{address})&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@SelectKey</span><span class="token punctuation">(</span>statement <span class="token operator">=</span> <span class="token string">&quot;select last_insert_id()&quot;</span><span class="token punctuation">,</span> keyProperty <span class="token operator">=</span> <span class="token string">&quot;id&quot;</span><span class="token punctuation">,</span> before <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span> resultType <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+    <span class="token class-name">Integer</span> <span class="token function">addUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Update</span><span class="token punctuation">(</span><span class="token string">&quot;update user set username=#{username},address=#{address} where id=#{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token class-name">Integer</span> <span class="token function">updateUserById</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Delete</span><span class="token punctuation">(</span><span class="token string">&quot;delete from user where id=#{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token class-name">Integer</span> <span class="token function">deleteUserById</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Cofalconer 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
+2020-07-12 16:42:47
 </span></footer>
                                 
                                 </section>
@@ -493,12 +518,12 @@
 
             
                 
-                <a href="../chapter4/" class="navigation navigation-prev " aria-label="Previous page: 第四章">
+                <a href="mybatis.html" class="navigation navigation-prev " aria-label="Previous page: 第1节：MyBatis使用">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="annotations.html" class="navigation navigation-next " aria-label="Next page: 注解符">
+                <a href="../chapter4/" class="navigation navigation-next " aria-label="Next page: 第四章">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -509,7 +534,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"附录","level":"1.6","depth":1,"next":{"title":"注解符","level":"1.6.1","depth":2,"path":"appendix/annotations.md","ref":"appendix/annotations.md","articles":[]},"previous":{"title":"第四章","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},"dir":"neutral"},"config":{"plugins":["code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","sharing-plus","prism","-highlight","styles-less","toggle-chapters","multipart","ancre-navigation","livereload"],"root":".","styles":{"website":"website-1594797512988.css","ebook":"ebook-1594797512999.css","pdf":"pdf-1594797513000.css","mobi":"mobi-1594797513001.css","epub":"epub-1594797513002.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Cofalconer 2020","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/FredCof"},"styles-less":{},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"weibo":true,"qq":true,"all":["douban","google","qzone","linkedin"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Cofalconer","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spring笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"首页":"https://cofal.work/"}},"gitbook":"3.2.3","description":"Spring学习笔记！"},"file":{"path":"appendix/README.md","mtime":"2020-07-10T05:49:00.386Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-15T07:18:30.479Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第2节：MyBatis注解","level":"1.4.2","depth":2,"next":{"title":"第四章","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},"previous":{"title":"第1节：MyBatis使用","level":"1.4.1","depth":2,"path":"chapter3/mybatis.md","ref":"chapter3/mybatis.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","sharing-plus","prism","-highlight","styles-less","toggle-chapters","multipart","ancre-navigation","livereload"],"root":".","styles":{"website":"website-1594797512988.css","ebook":"ebook-1594797512999.css","pdf":"pdf-1594797513000.css","mobi":"mobi-1594797513001.css","epub":"epub-1594797513002.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Cofalconer 2020","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/FredCof"},"styles-less":{},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"weibo":true,"qq":true,"all":["douban","google","qzone","linkedin"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Cofalconer","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spring笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"首页":"https://cofal.work/"}},"gitbook":"3.2.3","description":"Spring学习笔记！"},"file":{"path":"chapter3/mybatis_annotation.md","mtime":"2020-07-12T08:42:47.272Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-15T07:18:30.479Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
